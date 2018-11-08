@@ -21,7 +21,7 @@
 #include <vector>
 using namespace std;
 
-int main(int argc, char **argv) {
+int main(int argc, const char **argv) {
   if (argc < 2 || argc > 3) {  // Returns 1 if there is not an input file or output file.
     cout << "No valid input file." << endl;
     return 1;
@@ -29,6 +29,9 @@ int main(int argc, char **argv) {
   else {
     ifstream inputFile;
     inputFile.open(argv[1]);
+    if (inputFile.fail()) { // Returns 1 if the input file cannot be opened.
+      return 1;
+    }
   }
   if (argc == 3) { // Opens the output file if one is given. If not, prints to the console.
     ofstream outputFile;
@@ -56,19 +59,10 @@ int main(int argc, char **argv) {
   //   }
   // }
 
+
+  inputFile.close();
+  if (argc == 3) {
+    outputFile.close();
+  }
   return 0;
 }
-
-//****************************************************************
-//
-//  Function:         .
-//
-//  Purpose:          .
-//
-//  Parameters:       .
-//
-//  Pre Conditions:   .
-//
-//  Post Conditions:  .
-//
-//****************************************************************
