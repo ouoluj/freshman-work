@@ -7,9 +7,13 @@
 //
 //  Section:        100 (Nasseef Abukamail)
 //
-//  Description:    .
+//  Description:    A program to take a list of students' names and answers on
+//                    a test, scores them based off a given key, and output the
+//                    results in either an output file or to the console.
 //
 //  Date:           11-13-18
+//
+//  Compiled with C++ 11
 //
 //****************************************************************
 
