@@ -29,11 +29,11 @@ int main() {
 
   b1.setTitle("Destroy");
   b1.setYear(2022);
-  b1.setAuthor("Wing");
+  b1.setAuthor("Baker");
 
   cout << b1.matchAuthor("Wing") << endl;
 
-  if (b1.matchTitle("Destroy")) {
+  if (b1.match("bAkEr")) {
     cout << "hi" << endl;
   }
 

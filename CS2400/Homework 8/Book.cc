@@ -11,7 +11,7 @@
 //                  get/set a book's title, year, or author, and to search a book
 //                  for a given string (title, year, author, or any field).
 //
-//  Date:           11-28-18
+//  Date:           11-29-18
 //
 //****************************************************************
 
@@ -90,60 +90,56 @@ string Book::makeLower(string target) {
 
 bool Book::matchTitle(string targetTitle) {
 
-  string lowerTargetTitle;
-  string lowerTitle;
+  string lowerTargetTitle; // Target title, lowercased.
+  string lowerTitle;       // Current title, lowercased.
 
-  lowerTargetTitle = makeLower(targetTitle);
-  lowerTitle = makeLower(title);
+  lowerTargetTitle = makeLower(targetTitle); // Lowercases the target title.
+  lowerTitle = makeLower(title);             // Lowercases the original title.
 
-  if (lowerTitle.find(lowerTargetTitle) < title.length()) {
+  if (lowerTitle.find(lowerTargetTitle) < title.length()) { // Returns position of match, if found. If not, the result is higher than title.length().
     return true;
   }
 
-  return false;
+  return false; // If no match, returns false.
 
 }
 
 bool Book::matchYear(string targetYear) {
-  string tempYear = to_string(year);
+  string tempYear = to_string(year); // Converts current year to a string, to be compared.
 
-  if (tempYear.find(targetYear) < tempYear.length()) {
+  if (tempYear.find(targetYear) < tempYear.length()) { // Returns position of match, if found. If not, the result is higher than year.length().
     return true;
   }
 
-  return false;
+  return false; // If no match, returns false.
 }
 
 bool Book::matchAuthor(string targetAuthor) {
 
-  string lowerTargetAuthor;
-  string lowerAuthor;
-  cout << author << endl;
+  string lowerTargetAuthor; // Target author, lowercased.
+  string lowerAuthor;       // Current author, lowercased.
 
-  lowerTargetAuthor = makeLower(targetAuthor);
-  lowerAuthor = makeLower(author);
+  lowerTargetAuthor = makeLower(targetAuthor); // Lowercases the target author.
+  lowerAuthor = makeLower(author);             // Lowercases the current author.
 
-  if (lowerAuthor.find(lowerTargetAuthor) < author.length()) {
+  if (lowerAuthor.find(lowerTargetAuthor) < author.length()) { // Returns position of match, if found. If not, the result is higher than author.length().
     return true;
   }
 
-  return false;
-
+  return false; // If no match, returns false.
 }
 
 bool Book::match(string target) {
-  if (matchTitle(target)) {
+  if (matchTitle(target)) {  // Returns true if the target matches the title.
     return true;
   }
-  if (matchYear(target)) {
+  if (matchYear(target)) {   // Returns true if the target matches the year.
     return true;
   }
-  if (matchAuthor(target)) {
+  if (matchAuthor(target)) { // Returns true if the target matches the author.
     return true;
   }
-  else {
-    return false;
-  }
+  return false;              // Otherwise, returns false.
 }
 
 
