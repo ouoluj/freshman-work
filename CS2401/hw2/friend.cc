@@ -8,7 +8,7 @@
 
 Friend::Friend() {
   name = "";
-  bday = Date();
+  bday;
 }
 
 std::string Friend::get_name()const {
