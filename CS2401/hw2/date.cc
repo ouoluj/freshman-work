@@ -1,5 +1,5 @@
 /***********************************************************************
-	The implementation file for the date class including the 
+	The implementation file for the date class including the
 	implementation of overloaded insertion and extraction and
 	comparison operators.
 	John Dolan			September 2005
@@ -11,7 +11,7 @@
 using namespace std;
 // default constructor
 Date::Date(){
-	day=month=year=1;         
+	day=month=year=1;
     // permissable days for each month are loaded into an array
 	 daysallowed[0] = 0;
          daysallowed[1] = 31;
@@ -54,7 +54,7 @@ ostream& operator <<(ostream& outs, Date d){
 
 // input operator, overloaded as a friend
 istream& operator >>(istream& ins, Date& d){
-   bool flag = false;
+   // bool flag = false;
    string junk;
 
    ins>>d.month;
@@ -77,7 +77,7 @@ istream& operator >>(istream& ins, Date& d){
   if(ins.peek() == '/') ins.ignore();
 
    ins>>d.year;
-   
+
    return ins;
 }
 
@@ -96,7 +96,7 @@ bool operator < (const Date& d1, const Date& d2){
         if(d1.year != d2.year)
           return (d1.year < d2.year);
         else if(d1.month != d2.month)
-          return(d1.month < d2.month); 
+          return(d1.month < d2.month);
         else
           return (d1.day < d2.day);
 }
@@ -123,4 +123,3 @@ bool operator <= (const Date& d1, const Date& d2){
 bool operator >= (const Date& d1, const Date& d2){
         return (d1 == d2 || d1 > d2);
 }
-

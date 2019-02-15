@@ -20,28 +20,28 @@
 #include <cstdlib>
 #include "date.h"
 #include "friend.h"
-//#include "fbfriends.h"
+#include "fbfriends.h"
 
 using namespace std;
 
 int main() {
+  ifstream ins;
   Friend test;
   Friend test2;
+  FBFriends fb, fb2;
+
+  // ins.open("rplant.txt");
 
   cin >> test;
   cin >> test2;
-  cout << "output: ";
-  cout << test.get_name() << ": " << test.get_bday() << endl;
 
   cout << test << endl;
+  cout << test2 << endl;
 
-  if (!(test == test2)) {
-    cout << test2 << endl;
-  }
+  // fb.load(ins);
+  // fb.show_all(cout);
 
-  if (test == test2) {
-    cout << "These are the same person >:0" << endl;
-  }
+  // ins.close();
 
   return 0;
 }
