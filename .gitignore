@@ -30,3 +30,7 @@
 *.exe
 *.out
 *.app
+
+# Documentation, assignment details
+*.doc
+*.docx
