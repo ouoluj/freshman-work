@@ -1,6 +1,6 @@
 /*************************************************************************
       This file is borrowed heavily from Main/Savitch "Data Structures and
-      Other Object Using C++," Chapter 5. It features a node class that 
+      Other Object Using C++," Chapter 5. It features a node class that
       can be used in the construction of linked lists.
                 John Dolan  		March 2009
       Updated February 2019 - car is now the value_type
@@ -12,7 +12,7 @@
 
 class node{
     public:
-	typedef car value_type;
+	typedef Car value_type;
 	// Universal constructor
         node(value_type d = value_type(), node *l = NULL)
 		{data_field = d;  link_field = l;}
@@ -24,9 +24,9 @@ class node{
 		{link_field = l;}
 
         // Accessor functions
-        value_type data() const 
+        value_type data() const
 		{return data_field;}
-        node* link() 
+        node* link()
 		{return link_field;}
 	const node* link() const
 		{return link_field;}

@@ -1,8 +1,8 @@
 /******************************************************
-	This is the main for Project 3, which asks you to 
+	This is the main for Project 3, which asks you to
     build a container that holds a list of Cars.
     The cars are always kept in order, so they never need
-    to be sorted since they are always inserted in the order 
+    to be sorted since they are always inserted in the order
     where they go. You will also need the files:
 	car.h
 	car.cc
@@ -26,7 +26,7 @@ int menu();
 
 int main(){
     int choice;
-    car c;
+    Car c;
     string targetmake;
     int targetyear;
     ifstream fin;
@@ -53,7 +53,7 @@ int main(){
 		cin>>c;
 		inventory.add(c);
 		break;
-	    case 2: 
+	    case 2:
 		inventory.showall(cout);
 		break;
 	    case 3:
@@ -96,7 +96,7 @@ int main(){
 		acopy.showall(cout);
 		cout<<"With an adjusted value of $ "
 				<<acopy.tax_value()<<endl;
-		cout<<"But acutal value is still really: " 
+		cout<<"But acutal value is still really: "
 				<<inventory.tax_value();
 		break;
 		} // the copy goes out of scope here - destructor runs
@@ -156,4 +156,3 @@ int menu(){
 
     return choice;
 }
-

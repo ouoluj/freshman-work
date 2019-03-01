@@ -1,6 +1,6 @@
 /*********************************************
-	The implementation for the functions of the Car 
-class. All one-line functions have been implemented 
+	The implementation for the functions of the Car
+class. All one-line functions have been implemented
 inline in the car.h file.
     John Dolan	Ohio University EECS	Spring 2019
 ***************************************************/
@@ -65,7 +65,7 @@ void Car::output(std::ostream& outs)const{
     // Comparison operators
 bool Car::operator == (const Car& c)const
 {
-    return (year == c.year && make == c.make && 
+    return (year == c.year && make == c.make &&
 	model == c.model);
 }
 bool Car::operator != (const Car& c)const

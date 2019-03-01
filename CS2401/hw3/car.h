@@ -1,10 +1,10 @@
 /**************************************************
 	This class describes the data for a single car.
-That data consists of year, make, model, miles and price. 
-There is a full set of accessor functions, and input is 
-done via the input and output operators. The comparison 
-operators have also been defined, comparing by 1) year, 
-2)make and 3) model. All functions longer than one line 
+That data consists of year, make, model, miles and price.
+There is a full set of accessor functions, and input is
+done via the input and output operators. The comparison
+operators have also been defined, comparing by 1) year,
+2)make and 3) model. All functions longer than one line
 are implemented in car.cc.
 	John Dolan	Ohio University EECS Spring 2019
 ********************************************************/
