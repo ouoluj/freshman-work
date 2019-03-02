@@ -63,7 +63,7 @@ int main(){
 		break;
 	    case 4:
 		cout<<"Enter a make for which you would like to see all cars:\n";
-		while((cin.peek() == '\n' || cin.peek() == '\r')
+		while(cin.peek() == '\n' || cin.peek() == '\r')
 			cin.ignore();
 		getline(cin,targetmake);
 		inventory.view_all_of_make(targetmake);
@@ -84,7 +84,7 @@ int main(){
 		    cin>>targetyear;
 		    c.set_year(targetyear);
 		    cout<<"Enter make:";
-                    while((cin.peek() == '\n' || cin.peek() == '\r')
+                    while(cin.peek() == '\n' || cin.peek() == '\r')
                         cin.ignore();
                     getline(cin,targetmake);
 		    c.set_make(targetmake);
@@ -110,7 +110,7 @@ int main(){
                     cin>>targetyear;
                     c.set_year(targetyear);
                     cout<<"Enter make:";
-                    while((cin.peek() == '\n' || cin.peek() == '\r')
+                    while(cin.peek() == '\n' || cin.peek() == '\r')
                         cin.ignore();
                     getline(cin,targetmake);
                     c.set_make(targetmake);

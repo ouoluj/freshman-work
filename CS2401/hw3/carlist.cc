@@ -12,11 +12,20 @@ Carlist::Carlist() {
   head = NULL;
 }
 
-Carlist::Carlist(Carlist other) {
+Carlist::Carlist(const Carlist& other) {
   head = other.head;
-  
+
 }
 
 Carlist::~Carlist() {
 
+}
+
+void Carlist::add(Car c) {
+  node *current;
+  node *previous;
+  if (head == NULL) {head = new node(c, NULL); return;}
+  else if (c < head) {
+    node *tmp =
+  }
 }

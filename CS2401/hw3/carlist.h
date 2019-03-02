@@ -15,7 +15,7 @@ class Carlist {
 
 public:
   Carlist();
-  Carlist(Carlist other);
+  Carlist(const Carlist other);
   ~Carlist();
   void add(Car c); // 1
   void showall(std::ostream& outs)const; // 2
@@ -27,8 +27,8 @@ public:
   double miles_per_year()const; // 8
   void remove(Car c); // 9
 
-  void load();
-  void save();
+  void load(std::ifstream& ins);
+  void save(std::ofstream& outs);
 
 private:
   node *head;
