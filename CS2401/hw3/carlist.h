@@ -16,6 +16,7 @@ class Carlist {
 public:
   Carlist();
   Carlist(const Carlist other);
+  void operator =(const Carlist& other);
   ~Carlist();
   void add(Car c); // 1
   void showall(std::ostream& outs)const; // 2
